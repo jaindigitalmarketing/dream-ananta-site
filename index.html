@@ -198,6 +198,7 @@ input::placeholder{color:#7D7487}
 .am-ico svg{width:34px;height:34px}
 .am-tile{min-height:168px!important}
 .am-tile .t{font-size:19px}
+.fp-x{position:fixed!important;top:14px!important;right:14px!important;z-index:62!important;box-shadow:0 2px 10px rgba(0,0,0,.25)}
 }
 @media (max-width:760px){
 .pl-grid{margin-top:32px;gap:10px}
@@ -455,7 +456,6 @@ input::placeholder{color:#7D7487}
           <figcaption class="am-cap">
             <span class="am-ix">{{ a.ix }}</span>
             <h3 class="serif am-t" style="font-size:clamp(30px,3vw,42px)">{{ a.name }}</h3>
-            <p class="am-l">{{ a.line }}</p>
             <span class="am-bar" aria-hidden="true"></span>
           </figcaption>
         </figure>
@@ -469,7 +469,6 @@ input::placeholder{color:#7D7487}
           <figcaption class="am-cap">
             <span class="am-ix">{{ a.ix }}</span>
             <h3 class="serif am-t" style="font-size:28px">{{ a.name }}</h3>
-            <p class="am-l" style="font-size:14px">{{ a.line }}</p>
             <span class="am-bar" aria-hidden="true"></span>
           </figcaption>
         </figure>
@@ -477,7 +476,7 @@ input::placeholder{color:#7D7487}
     </div>
     <div class="am-list rv">
       <div class="am-nav">
-        <p style="margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#D8B878">The Full List</p>
+        <p style="margin:0 0 14px;font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:#D8B878">THE LIMITLESS LIFESTYLE</p>
         <p class="serif" style="margin:0;font-weight:500;font-size:clamp(26px,2.4vw,32px);line-height:1.1;color:#F5EFE6">Five ways to spend your day.</p>
         <ul class="am-cats" role="group" aria-label="Amenity categories">
           <li><button class="am-cat" aria-pressed="{{ amSel.c0 }}" onClick="{{ amPick.c0 }}"><span class="am-ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7.5l4 2.9-1.5 4.7h-5l-1.5-4.7z"></path><path d="M12 3v4.5"></path><path d="M20.6 9.4l-4.6 1"></path><path d="M17.3 19.3l-2.8-4.2"></path><path d="M6.7 19.3l2.8-4.2"></path><path d="M3.4 9.4l4.6 1"></path></svg></span>Sports &amp; Play<span class="am-cn">07</span></button></li>
@@ -772,10 +771,10 @@ input::placeholder{color:#7D7487}
 
 <!-- FLOOR PLAN MODAL -->
 <sc-if value="{{ planOpen }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-modal="true" aria-label="Floor plan" onClick="{{ closePlan }}" style="position:fixed;inset:0;z-index:60;background:rgba(51,33,71,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto">
-    <div onClick="{{ stop }}" style="position:relative;background:#F5EFE6;width:100%;max-width:1080px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))">
-      <button aria-label="Close floor plan" onClick="{{ closePlan }}" style="position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;background:#F5EFE6;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#241733" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
+  <div role="dialog" aria-modal="true" aria-label="Floor plan" onClick="{{ closePlan }}" style="position:fixed;inset:0;z-index:60;background:rgba(51,33,71,.8);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto">
+    <div onClick="{{ stop }}" style="position:relative;margin:auto 0;background:#F5EFE6;width:100%;max-width:1080px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(360px,100%),1fr))">
+      <button class="fp-x" aria-label="Close floor plan" onClick="{{ closePlan }}" style="position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;background:#332147;cursor:pointer;z-index:2;display:flex;align-items:center;justify-content:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#F5EFE6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
       </button>
       <div style="background:#EFE7DB;padding:24px;display:flex;align-items:center;justify-content:center">
         <img src="{{ plan.img }}" alt="{{ plan.alt }}" style="max-width:100%;max-height:560px;object-fit:contain;display:block">
@@ -820,8 +819,8 @@ input::placeholder{color:#7D7487}
 <div class="only-d">
   <button type="button" onClick="{{ openEnq }}" aria-label="Enquire now" style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:44;border:0;cursor:pointer;background:#C59D58;color:#332147;font-family:inherit;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:22px 14px;writing-mode:vertical-rl;transform-origin:center;box-shadow:-4px 6px 18px rgba(0,0,0,.28)">Enquire</button>
   <sc-if value="{{ enqOpen }}" hint-placeholder-val="{{ false }}">
-    <div role="dialog" aria-modal="true" aria-label="Enquire about Dream Ananta" onClick="{{ closeEnq }}" style="position:fixed;inset:0;z-index:66;background:rgba(51,33,71,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto">
-      <div onClick="{{ stop }}" style="position:relative;background:#F5EFE6;width:100%;max-width:500px;padding:clamp(24px,4vw,40px)">
+    <div role="dialog" aria-modal="true" aria-label="Enquire about Dream Ananta" onClick="{{ closeEnq }}" style="position:fixed;inset:0;z-index:66;background:rgba(51,33,71,.8);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto">
+      <div onClick="{{ stop }}" style="position:relative;margin:auto 0;background:#F5EFE6;width:100%;max-width:500px;padding:clamp(24px,4vw,40px)">
         <button aria-label="Close" onClick="{{ closeEnq }}" style="position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#241733" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
         </button>
@@ -876,8 +875,8 @@ input::placeholder{color:#7D7487}
 
 <!-- BROCHURE MODAL -->
 <sc-if value="{{ broOpen }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-modal="true" aria-label="Download brochure" onClick="{{ closeBrochure }}" style="position:fixed;inset:0;z-index:65;background:rgba(51,33,71,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto">
-    <div onClick="{{ stop }}" style="position:relative;background:#F5EFE6;width:100%;max-width:480px;padding:clamp(24px,4vw,40px)">
+  <div role="dialog" aria-modal="true" aria-label="Download brochure" onClick="{{ closeBrochure }}" style="position:fixed;inset:0;z-index:65;background:rgba(51,33,71,.8);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto">
+    <div onClick="{{ stop }}" style="position:relative;margin:auto 0;background:#F5EFE6;width:100%;max-width:480px;padding:clamp(24px,4vw,40px)">
       <button aria-label="Close" onClick="{{ closeBrochure }}" style="position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#241733" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
       </button>
@@ -928,8 +927,8 @@ input::placeholder{color:#7D7487}
 
 <!-- LEGAL MODAL -->
 <sc-if value="{{ legalOpen }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-modal="true" aria-label="{{ legal.title }}" onClick="{{ closeLegal }}" style="position:fixed;inset:0;z-index:80;background:rgba(51,33,71,.8);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto">
-    <div onClick="{{ stop }}" style="position:relative;background:#F5EFE6;width:100%;max-width:640px;padding:clamp(24px,4vw,44px)">
+  <div role="dialog" aria-modal="true" aria-label="{{ legal.title }}" onClick="{{ closeLegal }}" style="position:fixed;inset:0;z-index:80;background:rgba(51,33,71,.8);display:flex;align-items:flex-start;justify-content:center;padding:16px;overflow-y:auto">
+    <div onClick="{{ stop }}" style="position:relative;margin:auto 0;background:#F5EFE6;width:100%;max-width:640px;padding:clamp(24px,4vw,44px)">
       <button aria-label="Close" onClick="{{ closeLegal }}" style="position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#241733" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"></path></svg>
       </button>
