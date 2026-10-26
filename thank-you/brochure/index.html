@@ -4,9 +4,9 @@
 <meta name="robots" content="noindex">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thank You - Brochure | Dream Ananta</title>
-<meta name="description" content="Thank you for your interest in Dream Ananta by Jain Group.">
-<meta name="theme-color" content="#332147">
+<title>Thank You - Brochure | Ananta</title>
+<meta name="description" content="Thank you for your interest in Ananta by Jain Group.">
+<meta name="theme-color" content="#4D1810">
 <link rel="icon" type="image/png" href="../../assets/images/logo-ananta.png">
 <script>
   /* Live settings for this landing page - edit before going live.
@@ -24,17 +24,41 @@
 <body>
 <x-dc>
 <helmet>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Manrope',system-ui,sans-serif;background:#F5EFE6;color:#241733;-webkit-font-smoothing:antialiased}
+/* ===== Ananta brand tokens (from the Ananta at Dream Gurukul print brochure) ===== */
+:root,:host{
+--color-ink:#231F20;
+--color-ink-soft:#646568;
+--color-green:#005E3F;
+--color-green-deep:#245D42;
+--color-brown:#4D1810;
+--color-rust:#7F2E18;
+--color-espresso:#270F0B;
+--color-gold:#EEBB75;
+--color-bronze:#976A42;
+--color-peach-gold:#EDB689;
+--color-cream:#FFEED9;
+--color-butter:#FDE0A6;
+--color-white:#FFFFFF;
+--color-line:#E3CFAE;
+--color-error:#9B1C1C;
+--rgb-cream:255,238,217;
+--rgb-gold:238,187,117;
+--rgb-brown:77,24,16;
+--rgb-espresso:39,15,11;
+--font-sans:"Gill Sans Nova","Gill Sans","Gill Sans MT","Cabin","Segoe UI",sans-serif;
+}
+body{margin:0;font-family:var(--font-sans);font-weight:400;line-height:1.6;background:var(--color-cream);color:var(--color-ink);-webkit-font-smoothing:antialiased}
 html{scroll-behavior:smooth}
 *{box-sizing:border-box}
 section,footer{scroll-margin-top:72px}
 a{color:inherit}
 button{font-family:inherit}
-:focus-visible{outline:2px solid #7B5C96;outline-offset:3px}
-input::placeholder{color:#7D7487}
-.serif{font-family:'Cormorant Garamond',Georgia,serif}
+:focus-visible{outline:2px solid var(--color-green);outline-offset:3px}
+input::placeholder{color:var(--color-ink-soft)}
+.serif{font-family:var(--font-sans)}
+h2 em,.serif em{font-style:normal;font-weight:400;color:var(--color-rust)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 .fu{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
@@ -44,74 +68,74 @@ input::placeholder{color:#7D7487}
 .zoom{overflow:hidden}
 .zoom img{transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
 .zoom:hover img{transform:scale(1.045)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s;white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;font-size:15px;font-weight:500;letter-spacing:.04em;text-transform:none;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s;white-space:nowrap}
 .btn:hover{transform:translateY(-1px)}
-.btn-p{background:#C59D58;color:#2A1B3B;border-color:#C59D58}.btn-p:hover{background:#D3B072;border-color:#D3B072}
-.btn-l{background:transparent;color:#F5EFE6;border-color:rgba(245,239,230,.65)}.btn-l:hover{background:rgba(245,239,230,.14)}
-.btn-d{background:#C59D58;color:#2A1B3B;border-color:#C59D58}.btn-d:hover{background:#D3B072;border-color:#D3B072}
-.btn-od{background:transparent;color:#241733;border-color:#241733}.btn-od:hover{background:#241733;color:#F5EFE6}
-.card{background:#FFFCF6;border:1px solid #D8CAB6;transition:border-color .3s,transform .3s}
-.card:hover{border-color:#7B5C96;transform:translateY(-4px)}
-.tab{min-height:48px;padding:0 26px;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid;cursor:pointer;transition:background .25s,color .25s}
-.field{width:100%;height:52px;padding:0 16px;font-size:16px;font-family:inherit;color:#241733;background:#FFFCF6;border:1px solid #B5A68F;border-radius:0}
-.field:focus{outline:2px solid #7B5C96;outline-offset:1px;border-color:#7B5C96}
-.pill{min-height:44px;padding:0 18px;font-size:14px;font-weight:600;border:1px solid #B5A68F;background:#FFFCF6;color:#241733;cursor:pointer}
-.chip{display:inline-block;padding:9px 16px;border:1px solid #CDBEA8;font-size:14px;color:#433A4C}
+.btn-p{background:var(--color-green);color:var(--color-white);border-color:var(--color-green)}.btn-p:hover{background:var(--color-green-deep);border-color:var(--color-green-deep)}
+.btn-l{background:transparent;color:var(--color-cream);border-color:var(--color-gold)}.btn-l:hover{background:rgba(var(--rgb-gold),.14)}
+.btn-d{background:var(--color-green);color:var(--color-white);border-color:var(--color-green)}.btn-d:hover{background:var(--color-green-deep);border-color:var(--color-green-deep)}
+.btn-od{background:transparent;color:var(--color-green);border-color:var(--color-green)}.btn-od:hover{background:var(--color-green);color:var(--color-white)}
+.card{background:var(--color-white);border:1px solid var(--color-line);transition:border-color .3s,transform .3s}
+.card:hover{border-color:var(--color-green);transform:translateY(-4px)}
+.tab{min-height:48px;padding:0 26px;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;border:1px solid;cursor:pointer;transition:background .25s,color .25s}
+.field{width:100%;height:52px;padding:0 16px;font-size:16px;font-family:inherit;color:var(--color-ink);background:var(--color-white);border:1px solid var(--color-line);border-radius:0}
+.field:focus{outline:2px solid var(--color-green);outline-offset:1px;border-color:var(--color-green)}
+.pill{min-height:44px;padding:0 18px;font-size:14px;font-weight:500;border:1px solid var(--color-bronze);background:var(--color-white);color:var(--color-ink);cursor:pointer}
+.chip{display:inline-block;padding:9px 16px;border:1px solid var(--color-line);font-size:14px;color:var(--color-ink)}
 .reset{border:0;padding:0;margin:0;background:none;cursor:pointer;display:block;width:100%;text-align:left;color:inherit}
-.ty-link:hover{border-color:#C59D58!important;transform:translateY(-3px)}
+.ty-link:hover{border-color:var(--color-green)!important;transform:translateY(-3px)}
 @media (max-width:760px){.ty-steps{grid-template-columns:1fr!important}.btn{padding:0 20px}.ty-cta{flex-direction:column;align-items:stretch!important}.ty-cta .btn{width:100%}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </helmet>
 
-<div style="min-height:100vh;display:flex;flex-direction:column;background:#F5EFE6;color:#241733;overflow-x:clip">
+<div style="min-height:100vh;display:flex;flex-direction:column;background:var(--color-cream);color:var(--color-ink);overflow-x:clip">
 
-<header style="height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(16px,5vw,64px);background:#332147;border-bottom:1px solid rgba(197,157,88,.28)">
+<header style="height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 clamp(16px,5vw,64px);background:var(--color-brown);border-bottom:1px solid rgba(var(--rgb-gold),.28)">
   <a href="../../" aria-label="Ananta at Dream Gurukul - home" style="display:block;line-height:0">
     <img src="../../assets/images/logo-ananta.png" alt="Ananta at Dream Gurukul" style="width:140px;height:auto;display:block">
   </a>
-  <a href="../../" style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;color:#F5EFE6">Back to home</a>
+  <a href="../../" style="font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;color:var(--color-cream)">Back to home</a>
 </header>
 
 <main style="flex:1">
-  <section style="background:linear-gradient(180deg,#332147 0%,#2E1E40 45%,#4A3463 78%,#6E5180 100%);color:#F5EFE6;padding:clamp(56px,8vw,110px) 0 clamp(64px,9vw,120px)">
+  <section style="background:linear-gradient(180deg,var(--color-espresso) 0%,var(--color-brown) 100%);color:var(--color-cream);padding:clamp(56px,8vw,110px) 0 clamp(64px,9vw,120px)">
     <div style="max-width:880px;margin:0 auto;padding:0 clamp(20px,5vw,64px);text-align:center">
-      <div class="fu" style="width:72px;height:72px;margin:0 auto 28px;border:1px solid #C59D58;border-radius:50%;display:flex;align-items:center;justify-content:center">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#D8B878" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+      <div class="fu" style="width:72px;height:72px;margin:0 auto 28px;border:1px solid var(--color-gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#EEBB75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
       </div>
-      <p class="fu d1" style="margin:0 0 18px;font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#D8B878">Brochure requested</p>
-      <h1 class="serif fu d2" style="margin:0;font-weight:500;font-size:clamp(40px,6vw,76px);line-height:1.02;letter-spacing:-.01em">Thank you, your brochure is ready.</h1>
-      <p class="fu d3" style="margin:24px auto 0;max-width:600px;font-size:clamp(17px,1.6vw,20px);line-height:1.7;color:rgba(245,239,230,.88)">Floor plans, master plan and specifications for Dream Ananta, all in one place.</p>
+      <p class="fu d1" style="margin:0 0 18px;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--color-gold)">Brochure requested</p>
+      <h1 class="serif fu d2" style="margin:0;font-weight:300;font-size:clamp(2.5rem,6vw,4.75rem);line-height:1.05;letter-spacing:-.01em;color:var(--color-white)">Thank you, your brochure is ready.</h1>
+      <p class="fu d3" style="margin:24px auto 0;max-width:600px;font-size:1.0625rem;line-height:1.6;color:rgba(var(--rgb-cream),.88)">Floor plans, master plan and specifications for Ananta, all in one place.</p>
       <div class="ty-cta fu d3" style="margin-top:38px;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px">
         <sc-if value="{{ brochureUrl }}" hint-placeholder-val="{{ true }}">
           <a class="btn btn-p" href="{{ brochureUrl }}" target="_blank" rel="noopener" onClick="{{ trackBrochure }}">Open Brochure (PDF)</a>
         </sc-if>
-        <a class="btn btn-l" href="../../">Back to Dream Ananta</a>
+        <a class="btn btn-l" href="../../">Back to Ananta</a>
       </div>
       <sc-if value="{{ noBrochure }}" hint-placeholder-val="{{ false }}">
-        <p style="margin:22px auto 0;max-width:520px;font-size:15px;line-height:1.6;color:rgba(245,239,230,.8)">Our advisor will share the brochure with you on WhatsApp shortly.</p>
+        <p style="margin:22px auto 0;max-width:520px;font-size:15px;line-height:1.6;color:rgba(var(--rgb-cream),.8)">Our advisor will share the brochure with you on WhatsApp shortly.</p>
       </sc-if>
     </div>
   </section>
 
   <section style="padding:clamp(56px,7vw,96px) 0 0">
     <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
-      <p style="margin:0 0 14px;font-size:13px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#5E3F7A">What happens next</p>
+      <p style="margin:0 0 14px;font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--color-rust)">What happens next</p>
       <div class="ty-steps" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-        <div style="border-top:2px solid #7B5C96;padding:20px 0 0">
-          <p class="serif" style="margin:0 0 6px;font-size:34px;line-height:1;color:#5E3F7A">01</p>
-          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:28px;line-height:1.1">Read the brochure</h3>
-          <p style="margin:0;font-size:16px;line-height:1.65;color:#4A4053">Browse floor plans, amenities and specifications at your own pace.</p>
+        <div style="border-top:2px solid var(--color-bronze);padding:20px 0 0">
+          <p class="serif" style="margin:0 0 6px;font-weight:300;font-size:34px;line-height:1;color:var(--color-bronze)">01</p>
+          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:1.25rem;line-height:1.2">Read the brochure</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-ink)">Browse floor plans, amenities and specifications at your own pace.</p>
         </div>
-        <div style="border-top:2px solid #7B5C96;padding:20px 0 0">
-          <p class="serif" style="margin:0 0 6px;font-size:34px;line-height:1;color:#5E3F7A">02</p>
-          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:28px;line-height:1.1">Shortlist a home</h3>
-          <p style="margin:0;font-size:16px;line-height:1.65;color:#4A4053">Compare the 2, 3 and 4 BHK residences and their starting prices.</p>
+        <div style="border-top:2px solid var(--color-bronze);padding:20px 0 0">
+          <p class="serif" style="margin:0 0 6px;font-weight:300;font-size:34px;line-height:1;color:var(--color-bronze)">02</p>
+          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:1.25rem;line-height:1.2">Shortlist a home</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-ink)">Compare the 2, 3 and 4 BHK residences and their starting prices.</p>
         </div>
-        <div style="border-top:2px solid #7B5C96;padding:20px 0 0">
-          <p class="serif" style="margin:0 0 6px;font-size:34px;line-height:1;color:#5E3F7A">03</p>
-          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:28px;line-height:1.1">Ask our advisor</h3>
-          <p style="margin:0;font-size:16px;line-height:1.65;color:#4A4053">Share your questions and we will get back to you.</p>
+        <div style="border-top:2px solid var(--color-bronze);padding:20px 0 0">
+          <p class="serif" style="margin:0 0 6px;font-weight:300;font-size:34px;line-height:1;color:var(--color-bronze)">03</p>
+          <h3 class="serif" style="margin:0 0 8px;font-weight:500;font-size:1.25rem;line-height:1.2">Ask our advisor</h3>
+          <p style="margin:0;font-size:16px;line-height:1.6;color:var(--color-ink)">Share your questions and we will get back to you.</p>
         </div>
 
       </div>
@@ -120,10 +144,10 @@ input::placeholder{color:#7D7487}
 
   <section style="padding:clamp(56px,7vw,96px) 0">
     <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
-      <div style="border-top:1px solid #7B5C96;padding-top:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
+      <div style="border-top:1px solid var(--color-bronze);padding-top:32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px">
         <div>
-          <h2 class="serif" style="margin:0;font-weight:500;font-size:clamp(30px,3vw,40px);line-height:1.1">Prefer to talk now?</h2>
-          <p style="margin:8px 0 0;font-size:16px;color:#4A4053">Call or message our team directly.</p>
+          <h2 class="serif" style="margin:0;font-weight:300;font-size:clamp(30px,3vw,40px);line-height:1.1">Prefer to talk now?</h2>
+          <p style="margin:8px 0 0;font-size:16px;color:var(--color-ink)">Call or message our team directly.</p>
         </div>
         <div class="ty-cta" style="display:flex;flex-wrap:wrap;gap:12px">
           <a class="btn btn-d" href="tel:+917353158222" onClick="{{ trackPhone }}">Call 73531 58222</a>
@@ -134,9 +158,9 @@ input::placeholder{color:#7D7487}
   </section>
 </main>
 
-<footer style="background:#22152F;color:rgba(245,239,230,.72);padding:36px 0">
+<footer style="background:var(--color-brown);color:rgba(var(--rgb-cream),.72);padding:36px 0">
   <div style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,5vw,64px);font-size:13px;line-height:1.7">
-    <p style="margin:0 0 8px">RERA No. <strong style="color:#F5EFE6">WBRERA/P/NOR/2026/004487</strong></p>
+    <p style="margin:0 0 8px">RERA No. <strong style="color:var(--color-cream)">WBRERA/P/NOR/2026/004487</strong></p>
     <p style="margin:0 0 8px">Images are artistic impressions and indicative only. Starting prices are subject to change.</p>
     <p style="margin:0">© 2026 Jain Group. All rights reserved.</p>
   </div>
@@ -158,7 +182,7 @@ class Component extends DCLogic {
     const push = (n, p) => { try { window.dataLayer = window.dataLayer || []; window.dataLayer.push(Object.assign({ event: n }, p)); } catch (e) {} };
     return {
       brochureUrl, noBrochure: !brochureUrl,
-      waUrl: 'https://wa.me/919830029156?text=' + encodeURIComponent('Hi, I am interested in Dream Ananta. Please share details.'),
+      waUrl: 'https://wa.me/919830029156?text=' + encodeURIComponent('Hi, I am interested in Ananta. Please share details.'),
       trackBrochure: () => push('brochure_download', { source: 'thank_you_page' }),
       trackPhone: () => push('phone_click', { number: '7353158222' }),
       trackWa: () => push('whatsapp_click', { number: '9830029156' })
